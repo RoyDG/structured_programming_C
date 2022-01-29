@@ -7,3 +7,6 @@
 # data-structure
 
 # algorithm
+
+- conditional problem
+- Loop problem
