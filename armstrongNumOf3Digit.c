@@ -2,19 +2,18 @@
 
 int main() {
 
-    int num, numA, numB, res = 0;
+    int num, temp, rm, sum = 0;
     printf("Enter a three-digit integer: ");
     scanf("%d", &num);
-    numA = num;
+    temp = num;
 
-    while (numA != 0) {
-
-        numB = numA % 10;
-        numA /= 10;
-        res += numB * numB * numB;
+    while (temp != 0) {
+        rm = temp % 10;
+        sum += rm*rm*rm;
+        temp /= 10;
     }
 
-    if (res == num){
+    if (sum == num){
         printf("%d is an Armstrong number.", num);
     }
 
