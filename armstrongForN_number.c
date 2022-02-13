@@ -4,17 +4,19 @@
 
 int main() {
 
-   int num, temp, rm, n = 0, sum = 0;
+   int num, temp, rm, count = 0, sum = 0;
    printf("Enter an integer: ");
    scanf("%d", &num);
    temp = num;
 
-   for (temp = num; temp != 0; ++n) {
+   for (temp = num; temp != 0; count++) {
+
         temp /= 10;
    }
    for (temp = num; temp != 0; temp /= 10) {
+
         rm = temp % 10;
-        sum += pow(rm, n);
+        sum += pow(rm, count);
    }
    if (sum == num){
         printf("%d is an Armstrong number.", num);

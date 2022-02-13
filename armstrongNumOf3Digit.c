@@ -8,15 +8,14 @@ int main() {
     temp = num;
 
     while (temp != 0) {
+
         rm = temp % 10;
         sum += rm*rm*rm;
         temp /= 10;
     }
-
     if (sum == num){
         printf("%d is an Armstrong number.", num);
     }
-
     else{
         printf("%d is not an Armstrong number.", num);
     }
