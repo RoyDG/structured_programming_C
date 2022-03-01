@@ -1,71 +1,104 @@
 // Table 1. Standard C Library Functions
 /*
-    Function            System_Include_File         Function_Prototype              Description
+    Function            System_Include_File         Function_Prototype                  Description
 
-    abort                   stdlib.h                 void abort(void);         Stops a program abnormally.
-    abs                     stdlib.h                  int abs(int n);          Calculates the absolute value
+    abort                   stdlib.h                 void abort(void);          Stops a program abnormally.
+    abs                     stdlib.h                  int abs(int n);           Calculates the absolute value
                                                                                 of an integer argument n.
-    acos                    math.h                  double acos(double x);     Calculates the arc cosine of x.
-asctime time.h char *asctime(const struct tm *time);
-Converts the time that is stored as a structure to a character string.
-asctime_r time.h char *asctime_r(const struct tm *tm, char *buf);
-Converts tm that is stored as a structure to a character string.(Restartable version of asctime.)
-    asin math.h double asin(double x);
-Calculates the arc sine of x.
-assert assert.h void assert(int expression);
-Prints a diagnostic message and ends the program if the expression is false.
-atan math.h double atan(double x);
-Calculates the arc tangent of x.
-atan2 math.h double atan2(double y, double x);
-Calculates the arc tangent of y / x.
-atexit stdlib.h int atexit(void (*func)(void));
-Registers a function to be called at normal termination.
-atof stdlib.h double atof(const char *string);
+    acos                    math.h                  double acos(double x);      Calculates the arc cosine of x.
+    asctime                 time.h                  char *asctime(const         Converts the time that is stored
+                                                    struct tm *time);           as a structure to a character string.
+
+
+    asctime_r               time.h                  char *asctime_r(const       Converts tm that is stored as a
+                                                    struct tm *tm, char *buf);  structure to a character string.
+                                                                                (Restartable version of asctime.)
+
+    asin                    math.h                  double asin(double x);      Calculates the arc sine of x.
+
+    assert                  assert.h                void assert(int expression);Prints a diagnostic message
+                                                                                and ends the program if
+                                                                                the expression is false.
+
+    atan                    math.h                  double atan(double x);      Calculates the arc
+                                                                                tangent of x.
+
+    atan2                   math.h                  double atan2(double y,      Calculates the arc
+                                                                double x);      tangent of y / x.
+
+
+    atexit                  stdlib.h                int atexit(void (*func)     Registers a function to be
+                                                                    (void));    called at normal termination.
+
+
+    atof                    stdlib.h                double atof(const char *string);
 Converts string to a double - precision floating - point value.
-atoi stdlib.h int atoi(const char *string);
+    atoi                    stdlib.h                int atoi(const char *string);
 Converts string to an integer.
-atol stdlib.h long int atol(const char *string);
+    atol                    stdlib.h                long int atol(const char *string);
 Converts string to a long integer.
-bsearch stdlib.h void *bsearch(const void *key, const void *base, size_t num, size_t size, int (*compare)(const void *element1,
-const void *element2));
+    bsearch                 stdlib.h                void *bsearch(const void *key,
+                                                    const void *base, size_t num,
+                                                    size_t size, int (*compare)
+                                                    (const void *element1,
+                                                    const void *element2));
 Performs a binary search on an array of num elements, each of size bytes.The array must be sorted in ascending order by the
 function pointed to by compare.
-btowc
-                                                          stdio.h
-                                                              wchar.h
-                                                                  wint_t
-                                                                  btowc(int c);
-Determines whether c constitues a valid multibyte character in the initial shift state.calloc stdlib.h void *calloc(size_t num, size_t size);	Reserves storage space for an array of num elements, each of size size, and initializes the values of all elements to 0.
+    btowc                   stdio.h                 wint_t btowc(int c);
+                            wchar.h
+Determines whether c constitues a valid multibyte character in the initial shift state.
+calloc stdlib.h void *calloc(size_t num, size_t size);
+Reserves storage space for an array of num elements, each of size size, and initializes the values of all elements to 0.
 catclose6	nl_types.h	int catclose (nl_catd catd);
-Closes a previously opened message catalog.catgets6 nl_types.h char *catgets(nl_catd catd, int set_id, int msg_id, const char *s);
-Retrieves a message from an open message catalog.catopen6 nl_types.h nl_catd catopen(const char *name, int oflag);
-Opens a message catalog, which must be done before a message can be retrieved.ceil math.h double ceil(double x);
-Calculates the double value representing the smallest integer that is greater than or equal to x.clearerr stdio.h void clearerr(FILE *stream);	Resets the error indicators and the end-of-file indicator for stream.
+Closes a previously opened message catalog.
+catgets6 nl_types.h char *catgets(nl_catd catd, int set_id, int msg_id, const char *s);
+Retrieves a message from an open message catalog.
+catopen6 nl_types.h nl_catd catopen(const char *name, int oflag);
+Opens a message catalog, which must be done before a message can be retrieved.
+ceil math.h double ceil(double x);
+Calculates the double value representing the smallest integer that is greater than or equal to x.
+clearerr stdio.h void clearerr(FILE *stream);	Resets the error indicators and the end-of-file indicator for stream.
 clock	time.h	clock_t clock(void);
-Returns the processor time that has elapsed since the job was started.cos math.h double cos(double x);
-Calculates the cosine of x.cosh math.h double cosh(double x);
-Calculates the hyperbolic cosine of x.ctime time.h char *ctime(const time_t *time);
-Converts time to a character string.ctime64 time.h char *ctime64(const time64_t *time);
-Converts time to a character string.ctime_r time.h char *ctime_r(const time_t *time, char *buf);
+Returns the processor time that has elapsed since the job was started.
+cos math.h double cos(double x);
+Calculates the cosine of x.
+cosh math.h double cosh(double x);
+Calculates the hyperbolic cosine of x.
+ctime time.h char *ctime(const time_t *time);
+Converts time to a character string.
+ctime64 time.h char *ctime64(const time64_t *time);
+Converts time to a character string.
+ctime_r time.h char *ctime_r(const time_t *time, char *buf);
 Converts time to a character string.(Restartable version of ctime.)
-    ctime64_r time.h char *ctime64_r(const time64_t *time, char *buf);
+ctime64_r time.h char *ctime64_r(const time64_t *time, char *buf);
 Converts time to a character string.(Restartable version of ctime64.)
-    difftime time.h double difftime(time_t time2, time_t time1);
-Computes the difference between time2 and time1.difftime64 time.h double difftime64(time64_t time2, time64_t time1);
-Computes the difference between time2 and time1.div stdlib.h div_t div(int numerator, int denominator);
-Calculates the quotient and remainder of the division of numerator by denominator.erf math.h double erf(double x);
-Calculates the error function of x.erfc math.h double erfc(double x);	Calculates the error function for large values of x.
+difftime time.h double difftime(time_t time2, time_t time1);
+Computes the difference between time2 and time1.
+difftime64 time.h double difftime64(time64_t time2, time64_t time1);
+Computes the difference between time2 and time1.
+div stdlib.h div_t div(int numerator, int denominator);
+Calculates the quotient and remainder of the division of numerator by denominator.
+erf math.h double erf(double x);
+Calculates the error function of x.
+erfc math.h double erfc(double x);	Calculates the error function for large values of x.
 exit	stdlib.h	void exit(int status);
 Ends a program normally.exp math.h double exp(double x);
-Calculates the exponential function of a floating - point argument x.fabs math.h double fabs(double x);
-Calculates the absolute value of a floating - point argument x.fclose stdio.h int fclose(FILE *stream);
-Closes the specified stream.fdopen5 stdio.h FILE *fdopen(int handle, const char *type);
-Associates an input or output stream with the file identified by handle.feof stdio.h int feof(FILE *stream);	Tests whether the end-of-file flag is set for a given stream.
+Calculates the exponential function of a floating - point argument x.
+fabs math.h double fabs(double x);
+Calculates the absolute value of a floating - point argument x.
+fclose stdio.h int fclose(FILE *stream);
+Closes the specified stream.
+fdopen5 stdio.h FILE *fdopen(int handle, const char *type);
+Associates an input or output stream with the file identified by handle.
+feof stdio.h int feof(FILE *stream);	Tests whether the end-of-file flag is set for a given stream.
 ferror	stdio.h	int ferror(FILE *stream);	Tests for an error indicator in reading from or writing to stream.
 fflush1	stdio.h	int fflush(FILE *stream);
-Writes the contents of the buffer associated with the output stream.fgetc1 stdio.h int fgetc(FILE *stream);
-Reads a single unsigned character from the input stream.fgetpos1 stdio.h int fgetpos(FILE *stream, fpos_t *pos);
-Stores the current position of the file pointer associated with stream into the object pointed to by pos.fgets1 stdio.h char *fgets(char *string, int n, FILE *stream);
+Writes the contents of the buffer associated with the output stream.
+fgetc1 stdio.h int fgetc(FILE *stream);
+Reads a single unsigned character from the input stream.
+fgetpos1 stdio.h int fgetpos(FILE *stream, fpos_t *pos);
+Stores the current position of the file pointer associated with stream into the object pointed to by pos.
+fgets1 stdio.h char *fgets(char *string, int n, FILE *stream);
 Reads a string from the input stream.fgetwc6
     stdio.h
         wchar.h
