@@ -2,26 +2,26 @@
 
 int main(){
 
-    int row, i, j;
-    printf("Enter number Of Rows: ");
-    scanf("%d", &row);
+    int row, col, n;
+    printf("Enter Number: ");
+    scanf("%d", &n);
 
-    for(i=0; i<=row; i++){
-        for(j=1; j<= row-i; j++){
+    for(row=1; row<=n; row++){
+        for(col=1; col<= n-row; col++){
             printf(" ");
         }
-        for(j=1; j<= 2*i-1; j++){
-            printf("*");
+        for(col=1; col<=row; col++){
+            printf("* ");
         }
         printf("\n");
     }
 
-    for(i=row-1; i>=1; i--){
-        for(j=1; j<= row-i; j++){
+    for(row=n-1; row>=1; row--){
+        for(col=1; col<= n-row; col++){
             printf(" ");
         }
-        for(j=1; j<= 2*i-1; j++){
-            printf("*");
+        for(col=1; col<=row; col++){
+            printf("* ");
         }
         printf("\n");
     }
