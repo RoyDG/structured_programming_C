@@ -1,12 +1,12 @@
-# structured_programming_C
-
-# competitive_programming
-
-# problem_solving
-
-# data-structure
-
-# algorithm
+# Basic & Advance C Programming
 
 - conditional problem
 - Loop problem
+
+* Array problem
+* String problem
+* Function problem
+* Structure problem
+* Pointer problem
+* File problem
+* Preprocessor & other problem
