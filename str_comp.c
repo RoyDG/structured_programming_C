@@ -4,8 +4,8 @@ int compare(char a[],char b[]){
 
     int value =0, i=0;
 
-    while(a[i]!='\0' &&b[i]!='\0'){
-       if(a[i]!=b[i]){
+    while(a[i]!='\0' || b[i]!='\0'){
+       if(a[i]!= b[i]){
            value = 1;
            break;
        }
